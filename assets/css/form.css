@@ -1,0 +1,203 @@
+/* ===============================
+   RESET + BASE
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+  margin: 0;
+  padding: 20px;
+  color: #222;
+}
+
+/* ===============================
+   CONTAINER PRINCIPAL
+================================ */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ===============================
+   CATEGORY CARD
+================================ */
+.category-box {
+  border: 1px solid #e0e6ed;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: #fafbfd;
+  transition: 0.2s ease;
+}
+
+.category-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===============================
+   INPUTS
+================================ */
+.category-box input,
+.category-box textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #d0d7e2;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.category-box input:focus,
+.category-box textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+#addCategoryBtn {
+  background: #f1f3f6;
+  color: #333;
+}
+
+#addCategoryBtn:hover {
+  background: #e2e6eb;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  color: white;
+  flex: 1;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.3);
+}
+
+/* ===============================
+   RECOMMENDATION BOX
+================================ */
+#recommendationBox {
+  background: #f8fafc;
+  border: 1px solid #e0e6ed;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 25px;
+  animation: fadeIn 0.4s ease;
+}
+
+#recommendationBox h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#recommendationText {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   SELECT
+================================ */
+select {
+  background: white;
+  cursor: pointer;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 18px;
+  }
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* for bottom back for home*/
+.top-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.back-home {
+  background: transparent;
+  border: none;
+  color: #4e79a7;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}

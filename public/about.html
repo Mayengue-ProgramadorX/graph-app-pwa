@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About · Graph App</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#4e79a7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- ÍCONE -->
+  <link rel="icon" type="image/png" href="../assets/icons/licon.png">
+  <link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assets/css/form.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <div class="top-nav">
+      <button class="back-home" onclick="window.location.href='home.html'">
+        ← Home
+      </button>
+    </div>
+
+    <h1>About This App</h1>
+
+    <p>
+      <strong>Graph App</strong> is a smart data visualization tool that analyzes
+      user input and recommends the most appropriate chart types based on
+      real-world data interpretation rules.
+    </p>
+
+    <p>
+      It supports numeric values, named proportions, comparisons, trends, and
+      tabular visualization, ensuring clarity and correctness in data analysis.
+    </p>
+
+    <hr>
+
+    <h3>Developer Information</h3>
+
+    <p><strong>Developed by:</strong> Jose Mayengue Antonio</p>
+    <p><strong>Email:</strong>
+      <a href="mailto:josemayengue51@gmail.com">josemayengue51@gmail.com</a>
+    </p>
+    <p><strong>WhatsApp:</strong>
+      <a href="https://wa.me/17744945819" target="_blank">+1 774 494 5819</a>
+    </p>
+    <p><strong>Development Date:</strong> January 2026</p>
+
+  </main>
+
+  <!-- SERVICE WORKER -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("../service-worker.js");
+    }
+  </script>
+
+</body>
+</html>

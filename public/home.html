@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Graph App</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#4e79a7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- ÍCONE -->
+  <link rel="icon" type="image/png" href="../assets/icons/licon.png">
+  <link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body class="home-body">
+
+  <main class="home-container">
+
+    <h1>📊 Graph App</h1>
+
+    <p class="subtitle">
+      Turn your data into meaningful visualizations.
+    </p>
+
+    <div class="menu-buttons">
+      <button class="primary" onclick="window.location.href='app.html'">
+        ▶ Start
+      </button>
+
+      <button class="secondary" onclick="window.location.href='about.html'">
+        ℹ About
+      </button>
+    </div>
+
+  </main>
+
+  <!-- SERVICE WORKER -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("../service-worker.js");
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph App</title>
+
+    <!-- PWA -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#4e79a7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- ÍCONE DA ABA -->
+  <link rel="icon" type="image/png" href="../assets/icons/licon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/form.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- 🔙 VOLTAR PARA HOME -->
+    <div class="top-nav">
+      <button 
+        class="back-home"
+        onclick="window.location.href='home.html'">
+        ← Home
+      </button>
+    </div>
+
+    <h1>Category Registration</h1>
+    <p>
+      Add categories and describe their elements.
+      The system will analyze the data and recommend suitable charts.
+    </p>
+
+    <!-- ===================== -->
+    <!-- FORMULÁRIO PRINCIPAL -->
+    <!-- ===================== -->
+    <form id="categoryForm">
+
+      <div id="categoriesContainer"></div>
+
+      <div class="buttons">
+        <button type="button" id="addCategoryBtn">
+          + Add Category
+        </button>
+
+        <button type="submit" class="save-btn">
+          Analyze Data
+        </button>
+      </div>
+
+    </form>
+
+    <!-- ===================== -->
+    <!-- RECOMENDAÇÃO DO SISTEMA -->
+    <!-- ===================== -->
+    <div id="recommendationBox" style="display:none; margin-top:25px;">
+
+      <h3>Chart Recommendation</h3>
+
+      <p id="recommendationText"></p>
+
+      <label for="chartSelect">Choose a chart type:</label>
+      <select id="chartSelect" style="width:100%; padding:8px; margin-top:8px;">
+      </select>
+
+      <button 
+        id="goDashboardBtn" 
+        class="save-btn" 
+        style="margin-top:15px;">
+        View Chart
+      </button>
+
+    </div>
+
+  </main>
+
+  <script type="module" src="../assets/js/form.js"></script>
+
+    <!-- SERVICE WORKER -->
+  <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../service-worker.js");
+      }
+  </script>
+
+</body>
+</html>

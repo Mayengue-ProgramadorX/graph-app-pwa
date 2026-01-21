@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#4e79a7">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+  <!-- ÍCONE DA ABA -->
+  <link rel="icon" type="image/png" href="../assets/icons/licon.png">
+  
+  <link rel="stylesheet" href="../assets/css/dashboard.css" />
+</head>
+<body>
+
+  <main class="dashboard-container">
+
+    <header>
+      <h1>Chart Results</h1>
+      <p id="chartReason"></p>
+    </header>
+
+    <section class="chart-card">
+      <canvas id="chartCanvas"></canvas>
+      <div id="tableContainer" style="display:none;"></div>
+    </section>
+
+    <div class="actions">
+      <button onclick="download()">Download</button>
+      <button onclick="window.location.href='app.html'">
+        Create New Chart
+      </button>
+    </div>
+
+  </main>
+
+  <script src="../assets/js/dashboard.js"></script>
+
+    <!-- SERVICE WORKER -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../service-worker.js");
+      }
+    </script>
+
+</body>
+</html>

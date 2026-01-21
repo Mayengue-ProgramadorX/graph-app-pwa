@@ -1,0 +1,20 @@
+.top-nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .back-home {
+    background: transparent;
+    border: none;
+    color: #4e79a7;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 0;
+  }
+  
+  .back-home:hover {
+    text-decoration: underline;
+  }
+  
